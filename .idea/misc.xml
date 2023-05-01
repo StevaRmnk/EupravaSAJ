@@ -4,8 +4,14 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Gradjanin/pom.xml" />
+        <option value="$PROJECT_DIR$/Sudstvo/pom.xml" />
+        <option value="$PROJECT_DIR$/Tuzilastvo/pom.xml" />
+        <option value="$PROJECT_DIR$/Policija/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
 </project>

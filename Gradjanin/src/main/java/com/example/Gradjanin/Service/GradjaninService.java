@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface GradjaninService {
 
-    public List<Gradjanin> findAll();
+    public List<Gradjanin> nadjiSveGradjane();
+    public Gradjanin nadjiJednogGradjanina(String id);
 }
 

@@ -7,18 +7,18 @@ import java.time.LocalDate;
 
 @Document(collection="gradjani")
 public class Gradjanin {
-    private String jmbg;
+    private String jmbgGradjanina;
     private String ime;
     private String prezime;
     private LocalDate datumRodjenja;
     private String adresa;
 
-    public String getJmbg() {
-        return jmbg;
+    public String getJmbgGradjanina() {
+        return jmbgGradjanina;
     }
 
-    public void setJmbg(String jmbg) {
-        this.jmbg = jmbg;
+    public void setJmbgGradjanina(String jmbgGradjanina) {
+        this.jmbgGradjanina = jmbgGradjanina;
     }
 
     public String getIme() {

@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/EupravaSAJ.iml" filepath="$PROJECT_DIR$/.idea/EupravaSAJ.iml" />
       <module fileurl="file://$PROJECT_DIR$/Gradjanin/Gradjanin.iml" filepath="$PROJECT_DIR$/Gradjanin/Gradjanin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Policija/Policija.iml" filepath="$PROJECT_DIR$/Policija/Policija.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sudstvo/Sudstvo.iml" filepath="$PROJECT_DIR$/Sudstvo/Sudstvo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tuzilastvo/Tuzilastvo.iml" filepath="$PROJECT_DIR$/Tuzilastvo/Tuzilastvo.iml" />
     </modules>
   </component>
 </project>
