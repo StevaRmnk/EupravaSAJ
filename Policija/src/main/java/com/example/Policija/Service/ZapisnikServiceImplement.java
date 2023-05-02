@@ -25,16 +25,17 @@ public class ZapisnikServiceImplement implements ZapisnikService{
 
     @Override
     public Zapisnik napraviZapisnik(Zapisnik zapisnik) {
+
         return zapisnikRepository.save(zapisnik);
     }
 
     @Override
     public List<Zapisnik> nadjiSveZapisnikePolicajca(String jmbgPolicajca) {
-        return zapisnikRepository.findZapisniksByPolicajacsId(jmbgPolicajca);
+        return zapisnikRepository.findZapisnikByBrojZnacke(jmbgPolicajca);
     }
 
     @Override
     public List<Zapisnik> nadjiSveZapisnikeGradjanina(String jmbgGradjanina) {
-        return zapisnikRepository.findZapisniksByGradjaninsId(jmbgGradjanina);
+        return zapisnikRepository.findZapisnikByJmbgOsumnjicenog(jmbgGradjanina);
     }
 }

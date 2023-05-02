@@ -10,6 +10,5 @@ public interface DokazService {
     public List<Dokaz> nadjiSveDokaze();
     public Dokaz nadjiJedanDokaz(int idDokaza);
     public List<Dokaz> nadjiListuDokazaZaZapisnik(int idZapisnika);
-    public List<Zapisnik> nadjiListuZapisnikaZaDokaz(int idDokaza);
     public void dodajDokaz(Dokaz dokaz);
 }

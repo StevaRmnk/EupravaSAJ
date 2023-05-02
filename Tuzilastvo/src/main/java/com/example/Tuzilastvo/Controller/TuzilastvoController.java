@@ -49,6 +49,9 @@ public class TuzilastvoController {
 
     @PostMapping(value = "/optuznice/")
     public ResponseEntity<Optuznica> napraviOptuznicu(@RequestBody Optuznica optuznica){
+
+        System.out.println(optuznica.getIdOptuznice());
+
         return new ResponseEntity<>(optuznicaService.napraviOptuznicu(optuznica),HttpStatus.CREATED);
     }
 

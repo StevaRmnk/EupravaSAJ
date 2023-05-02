@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface DokazRepository extends JpaRepository<Dokaz,Integer> {
 
-    List<Dokaz> findDokazsByZapisniksId(int idZapisnika);
+    List<Dokaz> findDokazByIdZapisnika(int idZapisnika);
 }

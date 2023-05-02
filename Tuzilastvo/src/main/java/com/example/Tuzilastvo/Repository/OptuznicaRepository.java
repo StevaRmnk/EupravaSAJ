@@ -10,7 +10,7 @@ import java.util.List;
 public interface OptuznicaRepository extends JpaRepository<Optuznica,Integer> {
 
     @Transactional
-    @Query(value = "select * from optuznice o  where o.jmbg_tuzioca = ?1",
+    @Query(value = "select * from optuznice o  where o.brojLicenceTuzioca = ?1",
             nativeQuery = true)
     List<Optuznica> nadjiSveOptuzniceJednogTuzioca(String jmbgTuzioca);
 }

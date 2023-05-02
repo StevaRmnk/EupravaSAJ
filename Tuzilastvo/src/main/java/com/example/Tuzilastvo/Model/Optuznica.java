@@ -8,19 +8,26 @@ import java.time.LocalDate;
 public class Optuznica {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idOptuznice;
 
     @Column
     private LocalDate datumPodizanjaOptuznice;
 
-    @Column
-    private String jmbgTuzioca;
+    @JoinColumn(name = "brojLicenceTuzioca", referencedColumnName = "brojLicenceTuzioca",nullable = false)
+    private String brojLicenceTuzioca;
 
     @Column
     private String jmbgOptuzenog;
 
     @Enumerated
     private Status statusOptuznice;
+
+    @Column(nullable = true)
+    private int idZapisnika;
+
+    @Column(nullable = true)
+    private int idPrijaveGradjanina;
 
 
     public int getIdOptuznice() {
@@ -39,12 +46,12 @@ public class Optuznica {
         this.datumPodizanjaOptuznice = datumPodizanjaOptuznice;
     }
 
-    public String getJmbgTuzioca() {
-        return jmbgTuzioca;
+    public String getBrojLicenceTuzioca() {
+        return brojLicenceTuzioca;
     }
 
-    public void setJmbgTuzioca(String jmbgTuzioca) {
-        this.jmbgTuzioca = jmbgTuzioca;
+    public void setBrojLicenceTuzioca(String brojLicenceTuzioca) {
+        this.brojLicenceTuzioca = brojLicenceTuzioca;
     }
 
     public String getJmbgOptuzenog() {
@@ -61,6 +68,22 @@ public class Optuznica {
 
     public void setStatusOptuznice(Status statusOptuznice) {
         this.statusOptuznice = statusOptuznice;
+    }
+
+    public int getIdZapisnika() {
+        return idZapisnika;
+    }
+
+    public void setIdZapisnika(int idZapisnika) {
+        this.idZapisnika = idZapisnika;
+    }
+
+    public int getIdPrijaveGradjanina() {
+        return idPrijaveGradjanina;
+    }
+
+    public void setIdPrijaveGradjanina(int idPrijaveGradjanina) {
+        this.idPrijaveGradjanina = idPrijaveGradjanina;
     }
 
     public Optuznica(){

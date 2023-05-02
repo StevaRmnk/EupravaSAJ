@@ -3,6 +3,8 @@ package com.example.Tuzilastvo.Service;
 import com.example.Tuzilastvo.Model.Optuznica;
 import com.example.Tuzilastvo.Repository.OptuznicaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,6 +38,13 @@ public class OptuznicaServiceImplement implements OptuznicaService{
 
     @Override
     public Optuznica napraviOptuznicu(Optuznica optuznica) {
+        Integer idZap = optuznica.getIdZapisnika();
+        Integer idPrij = optuznica.getIdPrijaveGradjanina();
+
+//        if(idZap == null && idPrij == null){
+//            throw new IllegalArgumentException("Id zapisnika i prijave su null!");
+//        }
+
         return optuznicaRepository.save(optuznica);
     }
 }

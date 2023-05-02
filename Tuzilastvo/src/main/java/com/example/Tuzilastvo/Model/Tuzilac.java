@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Tuzilac {
 
     @Id
-    private String jmbgTuzioca;
+    private String brojLicenceTuzioca;
 
     @Column
     private String ime;
@@ -18,16 +18,6 @@ public class Tuzilac {
     @Column
     private String prezime;
 
-    @Column
-    private String brojLicenceTuzioca;
-
-    public String getJmbgTuzioca() {
-        return jmbgTuzioca;
-    }
-
-    public void setJmbgTuzioca(String jmbgTuzioca) {
-        this.jmbgTuzioca = jmbgTuzioca;
-    }
 
     public String getIme() {
         return ime;

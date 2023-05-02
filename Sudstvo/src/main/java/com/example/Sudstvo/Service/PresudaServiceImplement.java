@@ -33,7 +33,7 @@ public class PresudaServiceImplement implements PresudaService{
     }
 
     @Override
-    public void napraviNovuPresudu() {
-
+    public Presuda napraviNovuPresudu(Presuda presuda) {
+       return presudaRepository.save(presuda);
     }
 }

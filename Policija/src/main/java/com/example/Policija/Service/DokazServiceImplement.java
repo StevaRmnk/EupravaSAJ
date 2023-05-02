@@ -30,12 +30,7 @@ public class DokazServiceImplement implements DokazService{
 
     @Override
     public List<Dokaz> nadjiListuDokazaZaZapisnik(int idZapisnika) {
-        return dokazRepository.findDokazsByZapisniksId(idZapisnika);
-    }
-
-    @Override
-    public List<Zapisnik> nadjiListuZapisnikaZaDokaz(int idDokaza) {
-        return zapisnikRepository.findZapisniksByDokazsId(idDokaza);
+        return dokazRepository.findDokazByIdZapisnika(idZapisnika);
     }
 
     @Override

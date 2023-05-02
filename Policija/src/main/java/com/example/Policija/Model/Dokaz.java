@@ -17,8 +17,8 @@ public class Dokaz {
     @Enumerated
     private TipDokaza tipDokaza;
 
-    @ManyToMany(mappedBy = "listaDokaza")
-    private List<Zapisnik> listaZapisnika;
+    @JoinColumn(name = "idZapisnika", referencedColumnName = "idZapisnika",nullable = false)
+    private int idZapisnika;
 
 
     public int getIdDokaza() {
@@ -45,11 +45,11 @@ public class Dokaz {
         this.tipDokaza = tipDokaza;
     }
 
-    public List<Zapisnik> getListaZapisnika() {
-        return listaZapisnika;
+    public int getIdZapisnika() {
+        return idZapisnika;
     }
 
-    public void setListaZapisnika(List<Zapisnik> listaZapisnika) {
-        this.listaZapisnika = listaZapisnika;
+    public void setIdZapisnika(int idZapisnika) {
+        this.idZapisnika = idZapisnika;
     }
 }

@@ -33,6 +33,8 @@ public class PolicijaController {
 
     @PostMapping(value = "/zapisnici/",consumes = "application/json")
     public ResponseEntity<Zapisnik> napraviZapisnik(@RequestBody Zapisnik zapisnik){
+
+
         return new ResponseEntity<>(zapisnikService.napraviZapisnik(zapisnik),HttpStatus.CREATED);
     }
 

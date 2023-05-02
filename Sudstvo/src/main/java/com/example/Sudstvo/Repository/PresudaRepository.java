@@ -10,7 +10,7 @@ import java.util.List;
 public interface PresudaRepository extends JpaRepository<Presuda,Integer> {
 
     @Transactional
-    @Query(value = "select * from presude p  where p.broj_sudijske_licence = ?1",
+    @Query(value = "select * from presude p  where p.sudija = ?1",
             nativeQuery = true)
     List<Presuda> nadjiSvePresudeJednogSudije(String brojSudijskeLicence);
 

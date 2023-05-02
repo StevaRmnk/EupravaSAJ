@@ -9,13 +9,14 @@ import java.util.List;
 public class Zapisnik {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idZapisnika;
 
-    @Column
-    private String jmbgPolicajca;
+    @JoinColumn(name = "brojZnacke", referencedColumnName = "brojZnacke",nullable = false)
+    private String brojZnacke;
 
     @Column
-    private String jmbgOsumjicenog;
+    private String jmbgOsumnjicenog;
 
     @Column
     private LocalDate datumPravljenjaZapisnika;
@@ -23,13 +24,6 @@ public class Zapisnik {
     @Column
     private String opisPrekrsaja;
 
-    @ManyToMany
-    @JoinTable(
-            name = "dokaziuzapisniku",
-            joinColumns = @JoinColumn(name = "idZapisnika"),
-            inverseJoinColumns = @JoinColumn(name = "idDokaza")
-    )
-    private List<Dokaz> listaDokaza;
 
     public int getIdZapisnika() {
         return idZapisnika;
@@ -39,20 +33,20 @@ public class Zapisnik {
         this.idZapisnika = idZapisnika;
     }
 
-    public String getJmbgPolicajca() {
-        return jmbgPolicajca;
+    public String getBrojZnacke() {
+        return brojZnacke;
     }
 
-    public void setJmbgPolicajca(String jmbgPolicajca) {
-        this.jmbgPolicajca = jmbgPolicajca;
+    public void setBrojZnacke(String jmbgPolicajca) {
+        this.brojZnacke = jmbgPolicajca;
     }
 
-    public String getJmbgOsumjicenog() {
-        return jmbgOsumjicenog;
+    public String getJmbgOsumnjicenog() {
+        return jmbgOsumnjicenog;
     }
 
-    public void setJmbgOsumjicenog(String jmbgOsumjicenog) {
-        this.jmbgOsumjicenog = jmbgOsumjicenog;
+    public void setJmbgOsumnjicenog(String jmbgOsumnjicenog) {
+        this.jmbgOsumnjicenog = jmbgOsumnjicenog;
     }
 
     public LocalDate getDatumPravljenjaZapisnika() {
@@ -71,13 +65,6 @@ public class Zapisnik {
         this.opisPrekrsaja = opisPrekrsaja;
     }
 
-    public List<Dokaz> getListaDokaza() {
-        return listaDokaza;
-    }
-
-    public void setListaDokaza(List<Dokaz> listaDokaza) {
-        this.listaDokaza = listaDokaza;
-    }
 
     public Zapisnik(){
 

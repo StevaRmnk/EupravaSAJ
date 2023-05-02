@@ -1,20 +1,18 @@
 package com.example.Sudstvo.Model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "presude")
 public class Presuda {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idPresude;
 
-    @Column
-    private String brojSudijskeLicence;
+    @JoinColumn(name = "sudija", referencedColumnName = "brojSudijskeLicence",nullable = false)
+    private String sudija;
 
    @Column
     private int idOptuznice;
@@ -30,12 +28,12 @@ public class Presuda {
         this.idPresude = idPresude;
     }
 
-    public String getBrojSudijskeLicence() {
-        return brojSudijskeLicence;
+    public String getSudija() {
+        return sudija;
     }
 
-    public void setBrojSudijskeLicence(String brojSudijskeLicence) {
-        this.brojSudijskeLicence = brojSudijskeLicence;
+    public void setSudija(String sudija) {
+        this.sudija = sudija;
     }
 
     public int getIdOptuznice() {

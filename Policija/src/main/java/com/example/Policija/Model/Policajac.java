@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class Policajac {
 
     @Id
-    private String jmbgPolicajca;
+    private String brojZnacke;
 
     @Column
     private String ime;
@@ -25,17 +25,6 @@ public class Policajac {
     @Column
     private String adresa;
 
-    @Column
-    private String brojZnacke;
-
-
-    public String getJmbgPolicajca() {
-        return jmbgPolicajca;
-    }
-
-    public void setJmbgPolicajca(String jmbgPolicajca) {
-        this.jmbgPolicajca = jmbgPolicajca;
-    }
 
     public String getIme() {
         return ime;

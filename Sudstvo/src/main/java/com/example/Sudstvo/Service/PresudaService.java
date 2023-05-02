@@ -10,5 +10,5 @@ public interface PresudaService {
     public List<Presuda> nadjiSvePresudeJednogSudije(String brojSudijskeLicence);
     public List<Presuda> nadjiSvePresudeJednogGradjanina(String jmbgGradjanina);
     public Presuda nadjiJednuPresudu(int idPresude);
-    public void napraviNovuPresudu();
+    public Presuda napraviNovuPresudu(Presuda presuda);
 }
