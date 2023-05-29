@@ -1,0 +1,19 @@
+<div class="main">
+<div class="wrapper">
+    <div class="logo">
+        <img src="https://www.bor030.net/wp-content/slike/mup-policija-znacka.jpg" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        EPolicija
+    </div>
+    <form class="p-3 mt-3" [formGroup] = "loginForm" (ngSubmit) = "login()">
+        <div class="form-field d-flex align-items-center">   
+            <input type="text" name="userName" [formControlName] = "'brojZnacke'" id="userName" placeholder="Broj Značke">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <input type="password" name="password"[formControlName] = "'lozinka'"id="pwd" placeholder="Lozinka">
+        </div>
+        <button class="btn mt-3" type="submit">Prijavi Se</button>
+    </form>
+</div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://static.vecteezy.com/system/resources/previews/016/511/610/original/suspect-icon-free-vector.jpg" alt="rocket_contact"/>
+    </div>
+    <form  [formGroup] = "zapisnikForm" (ngSubmit) = "napraviZapisnik()">
+        <h3>Napravi Zapisnik</h3>
+       <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" name="txtName" class="form-control"  [formControlName] = "'jmbgOsumnjicenog'" placeholder="Email Osumnjicenog *" value="" />
+                </div>
+                <div class="form-group">
+                    <select  name="txtEmail" class="form-control" [formControlName] = "'tipDokaza'" >
+                        <option value="" disabled selected>Tip Dokaza*</option>
+                        <option value="MATERIJALNI">Materijalni</option>
+                        <option value="FOTOGRAFIJA">Fotografija</option>
+                        <option value="DOKUMENT">Dokument</option>
+                      </select>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="txtEmail" class="form-control" [formControlName] = "'datumZavodjenjaDokaza'"  placeholder="Datum Zavodjenja*" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="btnSubmit" class="btnContact" value="Potvrdi" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <textarea name="txtMsg" class="form-control"  [formControlName] = "'opisPrekrsaja'" placeholder="Opis Prekršaja *" style="width: 100%; height: 150px;"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="alert alert-danger position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlert" (click)="closeAlert()">
+    Došlo je do greške, pokušajte ponovo.
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+  <div class="alert alert-success position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlertSuccess" (click)="closeAlertSuccess()">
+    Zapisnik je uspešno kreiran.
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+  

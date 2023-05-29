@@ -1,0 +1,30 @@
+.contact-form{
+    background: #253965;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 13%;
+    float: left;
+    width: 70%;
+    height: 450px;
+    border-radius: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+}
+#list{
+   padding: 15px;
+   padding-bottom: 15px;
+}
+.contact-form h3{
+    text-align: center;
+    color: white;
+    margin-top: 25px;
+}

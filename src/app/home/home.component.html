@@ -1,0 +1,7 @@
+<app-nav></app-nav>
+<div class="fullscreen-wrapper">
+<div class="wrapper" style="display: flex;">
+    <app-zapisnik *ngIf="isLogged == 'policajac'"></app-zapisnik>
+    <app-pregled-zapisnika *ngIf="isLogged == 'policajac'"></app-pregled-zapisnika>
+</div>
+</div>

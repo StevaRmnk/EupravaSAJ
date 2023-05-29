@@ -1,0 +1,16 @@
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://static.vecteezy.com/system/resources/previews/010/730/607/original/official-document-circular-icon-vector.jpg" alt="rocket_contact"/>
+    </div>
+    <h3>Moji Poslednji Zapisnici</h3>
+    <div class="list-group" id="list">
+        <a href="#" *ngFor="let zapisnik of zapisnici.slice(0,3)" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{zapisnik.jmbgOsumnjicenog}}</h5>
+            <small>{{zapisnik.datumPravljenjaZapisnika | date:'dd-MM-yyyy'}}</small>
+          </div>
+          <p class="mb-1">Prekrsaj: {{zapisnik.opisPrekrsaja}}</p>
+          <small>Policajac sa brojem znacke: {{zapisnik.brojZnacke}}</small>
+        </a>
+      </div>
+</div>
