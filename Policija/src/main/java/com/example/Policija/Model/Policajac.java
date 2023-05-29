@@ -25,6 +25,8 @@ public class Policajac {
     @Column
     private String adresa;
 
+    @Column
+    private String lozinka;
 
     public String getIme() {
         return ime;
@@ -64,6 +66,14 @@ public class Policajac {
 
     public void setBrojZnacke(String brojZnacke) {
         this.brojZnacke = brojZnacke;
+    }
+
+    public String getLozinka() {
+        return lozinka;
+    }
+
+    public void setLozinka(String lozinka) {
+        this.lozinka = lozinka;
     }
 
     public Policajac(){

@@ -2,6 +2,7 @@ package com.example.Policija.Model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -19,7 +20,7 @@ public class Zapisnik {
     private String jmbgOsumnjicenog;
 
     @Column
-    private LocalDate datumPravljenjaZapisnika;
+    private LocalDateTime datumPravljenjaZapisnika;
 
     @Column
     private String opisPrekrsaja;
@@ -49,11 +50,11 @@ public class Zapisnik {
         this.jmbgOsumnjicenog = jmbgOsumnjicenog;
     }
 
-    public LocalDate getDatumPravljenjaZapisnika() {
+    public LocalDateTime getDatumPravljenjaZapisnika() {
         return datumPravljenjaZapisnika;
     }
 
-    public void setDatumPravljenjaZapisnika(LocalDate datumPravljenjaZapisnika) {
+    public void setDatumPravljenjaZapisnika(LocalDateTime datumPravljenjaZapisnika) {
         this.datumPravljenjaZapisnika = datumPravljenjaZapisnika;
     }
 

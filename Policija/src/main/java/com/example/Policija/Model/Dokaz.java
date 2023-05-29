@@ -9,6 +9,7 @@ import java.util.List;
 public class Dokaz {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idDokaza;
 
     @Column

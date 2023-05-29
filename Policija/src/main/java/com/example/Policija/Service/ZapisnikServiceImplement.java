@@ -31,7 +31,7 @@ public class ZapisnikServiceImplement implements ZapisnikService{
 
     @Override
     public List<Zapisnik> nadjiSveZapisnikePolicajca(String jmbgPolicajca) {
-        return zapisnikRepository.findZapisnikByBrojZnacke(jmbgPolicajca);
+        return zapisnikRepository.findZapisnikByBrojZnackeOrderByDatumPravljenjaZapisnikaDesc(jmbgPolicajca);
     }
 
     @Override

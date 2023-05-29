@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface GradjaninRepository  extends MongoRepository<Gradjanin, String> {
-
+    Gradjanin findByEmail(String email);
 }

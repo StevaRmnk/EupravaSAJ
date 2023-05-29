@@ -3,22 +3,31 @@ package com.example.Gradjanin.Model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.Id;
 import java.time.LocalDate;
 
 @Document(collection="gradjani")
 public class Gradjanin {
-    private String jmbgGradjanina;
+
+    @Id
+    private String email;
     private String ime;
     private String prezime;
-    private LocalDate datumRodjenja;
-    private String adresa;
-
-    public String getJmbgGradjanina() {
-        return jmbgGradjanina;
+    private String slika;
+    public String getEmail() {
+        return email;
     }
 
-    public void setJmbgGradjanina(String jmbgGradjanina) {
-        this.jmbgGradjanina = jmbgGradjanina;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSlika() {
+        return slika;
+    }
+
+    public void setSlika(String slika) {
+        this.slika = slika;
     }
 
     public String getIme() {
@@ -37,21 +46,6 @@ public class Gradjanin {
         this.prezime = prezime;
     }
 
-    public LocalDate getDatumRodjenja() {
-        return datumRodjenja;
-    }
-
-    public void setDatumRodjenja(LocalDate datumRodjenja) {
-        this.datumRodjenja = datumRodjenja;
-    }
-
-    public String getAdresa() {
-        return adresa;
-    }
-
-    public void setAdresa(String adresa) {
-        this.adresa = adresa;
-    }
 
     public Gradjanin(){
 

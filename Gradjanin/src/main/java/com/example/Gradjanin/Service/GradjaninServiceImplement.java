@@ -14,12 +14,13 @@ public class GradjaninServiceImplement implements GradjaninService{
     private GradjaninRepository gradjaninRepository;
 
     @Override
-    public List<Gradjanin> nadjiSveGradjane() {
+    public List<Gradjanin> findAll() {
         return gradjaninRepository.findAll();
     }
 
     @Override
-    public Gradjanin nadjiJednogGradjanina(String id) {
-        return gradjaninRepository.findById(id).orElseGet(null);
+    public Gradjanin create(Gradjanin gradjanin) {
+        return gradjaninRepository.insert(gradjanin);
     }
+
 }

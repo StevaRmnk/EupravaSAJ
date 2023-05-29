@@ -8,7 +8,7 @@ import java.util.List;
 public interface ZapisnikRepository extends JpaRepository<Zapisnik,Integer> {
 
 
-    List<Zapisnik> findZapisnikByBrojZnacke(String jmbgPolicajca);
+    List<Zapisnik> findZapisnikByBrojZnackeOrderByDatumPravljenjaZapisnikaDesc(String jmbgPolicajca);
 
     List<Zapisnik> findZapisnikByJmbgOsumnjicenog(String jmbgGradjanina);
 }
