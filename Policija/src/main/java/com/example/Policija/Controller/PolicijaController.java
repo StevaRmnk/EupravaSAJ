@@ -28,7 +28,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("policija")
-@CrossOrigin(origins = "http://localhost:4201")
+@CrossOrigin(origins = {"http://localhost:4201", "http://localhost:8082"})
 public class PolicijaController {
 
     @Autowired
@@ -53,6 +53,11 @@ public class PolicijaController {
     @GetMapping("/{id}")
     public ResponseEntity<Policajac> nadjiJednogPolicajca(@PathVariable("id")String jmbgPolicajca){
         return new ResponseEntity<>(policajacService.nadjiJednogPolicajca(jmbgPolicajca),HttpStatus.OK);
+    }
+
+    @GetMapping("/zapisnici")
+    public ResponseEntity<List<Zapisnik>> nadjiSveZapisnike(){
+        return new ResponseEntity<>(zapisnikService.nadjiSveZapisnike(),HttpStatus.OK);
     }
 
     @GetMapping("/zapisnici/{id}")

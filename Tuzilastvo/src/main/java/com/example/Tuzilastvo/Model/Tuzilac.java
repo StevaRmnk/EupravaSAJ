@@ -18,6 +18,9 @@ public class Tuzilac {
     @Column
     private String prezime;
 
+    @Column
+    private String lozinka;
+
 
     public String getIme() {
         return ime;
@@ -37,6 +40,14 @@ public class Tuzilac {
 
     public String getBrojLicenceTuzioca() {
         return brojLicenceTuzioca;
+    }
+
+    public String getLozinka() {
+        return lozinka;
+    }
+
+    public void setLozinka(String lozinka) {
+        this.lozinka = lozinka;
     }
 
     public void setBrojLicenceTuzioca(String brojLicenceTuzioca) {
