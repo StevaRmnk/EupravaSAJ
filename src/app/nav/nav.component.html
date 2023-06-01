@@ -5,8 +5,8 @@
         <span class="logoText">EPolicija</span>
       </a>
       <i class="fa-solid fa-bars" id ="hamburger"data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></i>
-      <span id="personName" *ngIf= "isLogged != 'false'" >{{name}}</span>
-      <span id="brojZnacke"  *ngIf= "isLogged == 'policajac'">Broj Značke: {{brojZnacke}}    |</span>
+      <span id="personName" *ngIf= "isLogged == 'korisnik'" >{{name}}</span>
+      <span id="brojZnacke"  *ngIf= "isLogged == 'policajac'">Broj Značke: {{brojZnacke}} | {{name}}</span>
       <img  [src]="picture" *ngIf= "isLogged == 'korisnik'" id="personImg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       <img  src="https://www.svgrepo.com/download/35009/policeman.svg" *ngIf= "isLogged == 'policajac'" id="personImg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
     </div>
@@ -22,7 +22,7 @@
                 <a class="nav-link active" [href]="authUrl" *ngIf="isLogged == 'false'">Prijava</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" (click)="logout()" *ngIf="isLogged != 'false'">Odjava</a>
+                <a class="nav-link active" (click)="logout()" *ngIf="isLogged != 'false'" href="">Odjava</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active"  *ngIf="isLogged != 'policajac'"routerLink="/login">Službeno lice</a>
