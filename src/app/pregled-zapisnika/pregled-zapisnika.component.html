@@ -1,0 +1,30 @@
+<div class="container contact-form">
+    <div class="contact-image">
+      <img src="https://static.vecteezy.com/system/resources/previews/010/730/607/original/official-document-circular-icon-vector.jpg" alt="rocket_contact" />
+    </div>
+    <h3>Svi Zapisnici</h3>
+    <button type="button" class="btn btn-outline-secondary" (click)="zapisniciPolicajca()" id="osvezi">Osveži</button>
+    <div class="list-container">
+      <div class="list-group" id="list">
+        <a href="#" *ngFor="let zapisnik of zapisnici" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{zapisnik.jmbgOsumnjicenog}}</h5>
+            <small>{{zapisnik.datumPravljenjaZapisnika | date:'dd-MM-yyyy'}}</small>
+          </div>
+          <p class="mb-1">Prekrsaj: {{zapisnik.opisPrekrsaja}}</p>
+          <small>Policajac sa brojem znacke: {{zapisnik.brojZnacke}}</small><br>
+          <button type="button" class="btn btn-outline-danger" id="optuziBtn" (click)="napraviOptuznicu(zapisnik.idZapisnika, zapisnik.jmbgOsumnjicenog)">Podigni Optužnicu</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-danger position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlert" (click)="closeAlert()">
+    Došlo je do greške, pokušajte ponovo.
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+  <div class="alert alert-success position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlertSuccess" (click)="closeAlertSuccess()">
+    Optužnica je uspešno kreirana.
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+  

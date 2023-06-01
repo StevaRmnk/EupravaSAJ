@@ -1,0 +1,19 @@
+<div class="main">
+    <div class="wrapper">
+        <div class="logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/007/126/472/original/scale-of-justice-icon-free-vector.jpg" alt="">
+        </div>
+        <div class="text-center mt-4 name">
+            ETužilaštvo
+        </div>
+        <form class="p-3 mt-3" [formGroup] = "loginForm" (ngSubmit) = "login()">
+            <div class="form-field d-flex align-items-center">   
+                <input type="text" name="userName" [formControlName] = "'brojLicence'" id="userName" placeholder="Broj Licence">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <input type="password" name="password" [formControlName] = "'lozinka'" id="pwd" placeholder="Lozinka">
+            </div>
+            <button class="btn mt-3" type="submit">Prijavi Se</button>
+        </form>
+    </div>
+    </div>

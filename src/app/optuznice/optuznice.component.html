@@ -1,0 +1,20 @@
+<div class="container contact-form">
+    <div class="contact-image">
+      <img src="https://static.vecteezy.com/system/resources/previews/005/948/445/original/document-icon-circle-file-symbol-paper-icon-free-vector.jpg" alt="rocket_contact" />
+    </div>
+    <h3>Moje Poslednje Optužnice</h3>
+    <button type="button" class="btn btn-outline-secondary" id="osvezi" (click)="optuzniceTuzioca()">Osveži</button>
+    <div class="list-container">
+      <div class="list-group" id="list">
+        <a href="#" *ngFor="let optuznica of optuznice" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{optuznica.jmbgOptuzenog}}</h5>
+            <small>{{optuznica.datumPodizanjaOptuznice | date:'dd-MM-yyyy'}}</small>
+          </div>
+          <p class="mb-1">Status Optuznice: {{optuznica.statusOptuznice}}</p>
+          <small>Tuzilac sa brojem licence: {{optuznica.brojLicenceTuzioca}}</small>
+        </a>
+      </div>
+    </div>
+  </div>
+  

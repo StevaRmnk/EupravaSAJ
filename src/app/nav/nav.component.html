@@ -1,0 +1,36 @@
+<nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="display: flex;"href="#">
+        <img src="assets/images/justice.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        <span class="logoText">ETužilaštvo</span>
+      </a>
+      <i class="fa-solid fa-bars" id ="hamburger"data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></i>
+      <span id="personName" *ngIf= "isLogged == 'korisnik'" >{{name}}</span>
+      <span id="brojZnacke"  *ngIf= "isLogged == 'tuzilac'">Broj Licence: {{brojLicence}} | {{name}}</span>
+      <img  [src]="picture" *ngIf= "isLogged == 'korisnik'" id="personImg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <img  src="https://www.svgrepo.com/show/277291/lawyer.svg" *ngIf= "isLogged == 'tuzilac'" id="personImg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+    </div>
+    
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel" id="menuTitle">ETužilaštvo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active"  [href]="authUrl" *ngIf="isLogged == 'false'">Prijava</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" (click)="logout()" *ngIf="isLogged != 'false'" href="">Odjava</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active"  *ngIf="isLogged != 'tuzilac'"routerLink="/login">Službeno lice</a>
+              </li>
+              
+            </ul>
+      </div>
+      </div>
+  
+  </nav>
+  
