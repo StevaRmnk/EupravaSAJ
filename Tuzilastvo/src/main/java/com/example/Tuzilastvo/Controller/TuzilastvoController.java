@@ -2,11 +2,14 @@ package com.example.Tuzilastvo.Controller;
 
 
 import com.example.Tuzilastvo.DTO.LoginDTO;
+import com.example.Tuzilastvo.DTO.PrijavaGradjaninaDTO;
 import com.example.Tuzilastvo.DTO.TokenDTO;
 import com.example.Tuzilastvo.Model.Optuznica;
+import com.example.Tuzilastvo.Model.PrijavaGradjanina;
 import com.example.Tuzilastvo.Model.Tuzilac;
 import com.example.Tuzilastvo.Model.Zapisnik;
 import com.example.Tuzilastvo.Service.OptuznicaService;
+import com.example.Tuzilastvo.Service.PrijavaService;
 import com.example.Tuzilastvo.Service.TuzilacService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
@@ -35,6 +38,9 @@ public class TuzilastvoController {
 
     @Autowired
     private OptuznicaService optuznicaService;
+
+    @Autowired
+    private PrijavaService prijavaService;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -139,6 +145,17 @@ public class TuzilastvoController {
         List<Zapisnik> zapisnici = restTemplate.getForObject(url, List.class);
 
         return new ResponseEntity<>(zapisnici, HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/prijaveGradjanina/")
+    public ResponseEntity<PrijavaGradjanina> napraviPrijavu(@RequestBody PrijavaGradjaninaDTO prijava){
+
+        return new ResponseEntity<>(prijavaService.napraviPrijavu(prijava),HttpStatus.CREATED);
+    }
+
+    @GetMapping(value = "/prijaveGradjanina/")
+    public ResponseEntity<List<PrijavaGradjanina>> nadjiSvePrijave(){
+        return new ResponseEntity<>(prijavaService.nadjiSvePrijave(),HttpStatus.OK);
     }
 
 }

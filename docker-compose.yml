@@ -66,35 +66,35 @@ services:
       spring.datasource.password: root
     links:
       - postgres
-#
-#  sudstvo:
-#    build:
-#      context: ./Sudstvo/
-#      dockerfile: Dockerfile
-#    restart: on-failure
-#    container_name: sudstvo
-#    ports:
-#      - 8083:8083
-#    environment:
-#      SPRING_DATASOURCE_URL: jdbc:mysql://mysqlbaza2:3306/sudstvo
-#      SPRING_DATASOURCE_PASSWORD: root
-#      SPRING_DATASOURCE_USERNAME: root
-#
-#  mysqlbaza2:
-#    image: mysql
-#    container_name: mysqlbaza2
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_USERNAME: root
-#      MYSQL_DATABASE: sudstvo
-#    ports:
-#      - 3308:3306
-#    volumes:
-#      - ./baza:/mysql/data
-#
-#
-#
-#
+
+  sudstvo:
+    build:
+      context: ./Sudstvo/
+      dockerfile: Dockerfile
+    restart: on-failure
+    container_name: sudstvo
+    ports:
+      - 8083:8083
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqlbaza2:3306/sudstvo
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_DATASOURCE_USERNAME: root
+
+  mysqlbaza2:
+    image: mysql
+    container_name: mysqlbaza2
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USERNAME: root
+      MYSQL_DATABASE: sudstvo
+    ports:
+      - 3308:3306
+    volumes:
+      - ./baza:/mysql/data
+
+
+
+
   postgres:
     container_name: postgres_container
     image: postgres

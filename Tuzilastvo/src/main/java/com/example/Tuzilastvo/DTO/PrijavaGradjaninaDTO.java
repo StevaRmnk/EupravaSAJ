@@ -1,43 +1,21 @@
-package com.example.Tuzilastvo.Model;
+package com.example.Tuzilastvo.DTO;
 
-import javax.persistence.*;
+import com.example.Tuzilastvo.Model.PrijavaGradjanina;
+import com.example.Tuzilastvo.Model.Status;
+
+import javax.persistence.Column;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "prijaveGradjanina")
-public class PrijavaGradjanina {
+public class PrijavaGradjaninaDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPrijave;
-    @Column
+
     private String opisPrekrsaja;
-    @Column
     private String jmbgOsumnjicenog;
-    @Enumerated
-    private Status statusPrijave;
-    @Column
     private LocalDate datumPodizanjaPrijave;
-    @Column
     private Boolean anonimna;
-    @Column(nullable = true)
     private String jmbgGradjanina;
-
-    public int getIdPrijave() {
-        return idPrijave;
-    }
-
-    public void setIdPrijave(int idPrijave) {
-        this.idPrijave = idPrijave;
-    }
-
-    public LocalDate getDatumPodizanjaPrijave() {
-        return datumPodizanjaPrijave;
-    }
-
-    public void setDatumPodizanjaPrijave(LocalDate datumPodizanjaPrijave) {
-        this.datumPodizanjaPrijave = datumPodizanjaPrijave;
-    }
 
     public String getOpisPrekrsaja() {
         return opisPrekrsaja;
@@ -55,12 +33,12 @@ public class PrijavaGradjanina {
         this.jmbgOsumnjicenog = jmbgOsumnjicenog;
     }
 
-    public Status getStatusPrijave() {
-        return statusPrijave;
+    public LocalDate getDatumPodizanjaPrijave() {
+        return datumPodizanjaPrijave;
     }
 
-    public void setStatusPrijave(Status statusPrijave) {
-        this.statusPrijave = statusPrijave;
+    public void setDatumPodizanjaPrijave(LocalDate datumPodizanjaPrijave) {
+        this.datumPodizanjaPrijave = datumPodizanjaPrijave;
     }
 
     public Boolean getAnonimna() {
@@ -79,7 +57,15 @@ public class PrijavaGradjanina {
         this.jmbgGradjanina = jmbgGradjanina;
     }
 
-    public PrijavaGradjanina(){
+    public PrijavaGradjaninaDTO(String opisPrekrsaja, String jmbgOsumnjicenog, LocalDate datumPodizanjaPrijave, Boolean anonimna, String jmbgGradjanina) {
+        this.opisPrekrsaja = opisPrekrsaja;
+        this.jmbgOsumnjicenog = jmbgOsumnjicenog;
+        this.datumPodizanjaPrijave = datumPodizanjaPrijave;
+        this.anonimna = anonimna;
+        this.jmbgGradjanina = jmbgGradjanina;
+    }
+
+    public PrijavaGradjaninaDTO(){
 
     }
 }
