@@ -1,0 +1,19 @@
+<div class="container contact-form">
+    <div class="contact-image">
+      <img src="https://static.vecteezy.com/system/resources/previews/010/730/607/original/official-document-circular-icon-vector.jpg" alt="rocket_contact" />
+    </div>
+    <h3>Poslednje Presude</h3>
+    <button type="button" class="btn btn-outline-light" (click)="getPresude()" id="osvezi">Osveži</button>
+    <div class="list-container">
+      <div class="list-group" id="list">
+        <a href="#" *ngFor="let presuda of presude" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+             <h5 class="mb-1">{{presuda.jmbgOptuzenog}}</h5>
+          </div>
+          <p class="mb-1">Kriv: {{presuda.kriv}}</p>
+          <small>Sudija: {{presuda.sudija}}</small><br> 
+         
+        </a>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,55 @@
+<div class="container contact-form">
+    <div class="contact-image">
+      <img src="https://static.vecteezy.com/system/resources/previews/010/730/607/original/official-document-circular-icon-vector.jpg" alt="rocket_contact" />
+    </div>
+    <h3>Sve Optuznice</h3>
+    <button type="button" class="btn btn-outline-light" (click)="sveOptuznice()"  id="osvezi">Osveži</button>
+    <div class="list-container">
+      <div class="list-group" id="list">
+        <a href="#" *ngFor="let optuznica of optuznice" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{optuznica.jmbgOptuzenog}}</h5>
+            <small>{{optuznica.datumPodizanjaOptuznice | date:'dd-MM-yyyy'}}</small>
+          </div>
+          <p class="mb-1">Status Optuznice: {{optuznica.statusOptuznice}}</p>
+          <small>Tuzilac: {{optuznica.brojLicenceTuzioca}}</small><br>
+          <button type="button" class="btn btn-outline-danger"  (click)="zakazivanje(optuznica.jmbgOptuzenog, optuznica.idOptuznice)"  id="optuziBtn">Zakaži suđenje</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-danger position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlert" (click)="closeAlert()">
+    Došlo je do greške, pokušajte ponovo.
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+  <div class="alert alert-success position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlertSuccess" (click)="closeAlertSuccess()">
+    Sudjenje je zakazano.
+    <button type="button" class="btn-close" aria-label="Close"></button>
+  </div>
+  
+
+  <form class="modal fade" id="exampleModal3"  [formGroup] = "sudjenjeForm" (ngSubmit) = "zakaziSudjenje()" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Zakaži Sudjenje</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="inputPassword5" class="form-label">Broj Sale</label>
+            <input type="text" id="inputPassword5" [formControlName] = "'brojSale'"class="form-control" aria-labelledby="passwordHelpBlock">
+            <label for="inputPassword5" class="form-label">Datum</label>
+            <input type="date" id="inputPassword5" [formControlName] = "'vremeSudjenja'"class="form-control" aria-labelledby="passwordHelpBlock">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+          <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Zakaži</button>
+        </div>
+      </div>
+    </div>
+</form>
+
+
+
+

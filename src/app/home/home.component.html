@@ -1,0 +1,10 @@
+<app-nav></app-nav>
+<div class="fullscreen-wrapper">
+    <div class="wrapper" style="display: flex;">
+        <app-prikaz-presuda *ngIf="isLogged == 'sudija'"></app-prikaz-presuda>
+         <app-prikaz-sudjenja *ngIf="isLogged == 'sudija'"></app-prikaz-sudjenja>
+         <app-optuznice *ngIf="isLogged == 'sudija'"></app-optuznice>
+     
+    </div>
+    <app-pozivi *ngIf="isLogged == 'korisnik'"></app-pozivi> 
+    </div>

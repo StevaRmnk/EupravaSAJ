@@ -1,0 +1,37 @@
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import jwt_decode from 'jwt-decode';
+import { environment } from 'src/environments/environment';
+import { AuthServiceService } from '../shared/auth-service.service';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent {
+
+  isLogged!: string;
+  constructor(private route: ActivatedRoute, private authService: AuthServiceService) { }
+  
+  ngOnInit(): void {
+    this.setToken()
+    this.checkToken();
+  }
+
+  checkToken(){
+    this.isLogged = this.authService.isLogged();
+  }
+  
+  setToken(): void {
+    const token = this.route.snapshot.queryParamMap.get('at');
+    if (token) {
+      try {
+        const decodedToken = jwt_decode(token) as { [key: string]: any };
+        localStorage.setItem('token', token);
+      } catch (err) {
+        
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+nav{
+    background-color: #242424;
+    border-bottom: 5px solid rgb(210, 210, 210);
+    }
+    img{
+        width:56%;
+        height:5%;
+        margin-left:25px;
+    }
+    .logoText{
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        font-weight: light;
+        color: rgb(232, 232, 232);
+        margin-top: 12px;
+        margin-left: 2px;
+    }
+    .navbar-brand{
+        width:150px;
+    }
+    #hamburger{
+        margin-left: 216px;
+        font-size: 28px;
+        position:absolute;
+        color: rgb(232, 232, 232);
+        cursor: pointer;
+    }
+    #offcanvasWithBothOptions{
+        width: 20vw;
+    }
+    .offcanvas-body{
+        padding: 0;
+    }
+    nav ul li a{
+        color: rgb(97, 97, 98);
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        cursor: pointer;
+        padding-bottom: 1vw;
+        padding-top: 1vw;
+        font-size: 1.3vw;
+    }
+    nav ul li a:hover{
+        background-color:rgb(97, 97, 98);
+        color: white;
+        transition: 0.2s;
+    
+    
+    }
+    #menuTitle{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        color: rgb(97, 97, 98);
+        font-size: 1.4vw;
+    }
+    #underNav a{
+        color: white;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        cursor: pointer;
+     
+    }
+    
+     #underNav li{
+       /* background-color: #253965; */
+       border-right: 1px solid white;
+     
+    } 
+    #personImg{
+        width: 60px;
+        margin-right: 15px;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+    #personName{
+        position: absolute;
+        right:100px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        font-size: 18px;
+        color: rgb(232, 232, 232);
+    }
+    #brojZnacke{
+        position: absolute;
+        right:100px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+        font-size: 18px;
+        color: rgb(232, 232, 232);
+    }
