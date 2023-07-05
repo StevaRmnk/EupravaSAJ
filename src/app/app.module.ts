@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PregledZapisnikaComponent } from './pregled-zapisnika/pregled-zapisnika.component';
 import { OptuzniceComponent } from './optuznice/optuznice.component';
+import { PrijaveGradjaninaComponent } from './prijave-gradjanina/prijave-gradjanina.component';
+import { PregledPrijavaComponent } from './pregled-prijava/pregled-prijava.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { OptuzniceComponent } from './optuznice/optuznice.component';
     LoginComponent,
     PregledZapisnikaComponent,
     OptuzniceComponent,
+    PrijaveGradjaninaComponent,
+    PregledPrijavaComponent,
 
   ],
   imports: [

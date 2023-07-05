@@ -5,6 +5,7 @@ import jwt_decode from 'jwt-decode';
 import { ZapisnikServiceService } from '../shared/zapisnik-service.service';
 import { OptuzniceServiceService } from '../shared/optuznice-service.service';
 import { Optuznica } from './Optuznica';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-optuznice',

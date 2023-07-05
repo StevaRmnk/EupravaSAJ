@@ -1,7 +1,8 @@
 .contact-form{
     background: #e1e1e5;
-    margin-top: 7%;
-    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+    width: 50%;
     height: 500px;
     border-radius: 0.5rem;
     font-family: 'Roboto', sans-serif;
@@ -36,4 +37,46 @@
 #osvezi{
     margin-left: 43%;
     
+}
+.contact-form .form-control{
+ 
+    margin-bottom: 15px;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+}
+.contact-form form{
+    padding: 8%;
+}
+
+
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.5%;
+    font-family: 'Roboto', sans-serif;
+    background: #dc3545;
+    font-weight: light;
+    color: #fff;
+    cursor: pointer;
+}
+.contact-form .btnContact:hover{
+    background-color: #595959;
+    transition: 0.3s;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: white;
+    border: none;
+    cursor: pointer;
 }

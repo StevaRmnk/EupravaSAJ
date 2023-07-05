@@ -3,5 +3,7 @@
     <div class="wrapper" style="display: flex;">
         <app-optuznice *ngIf="isLogged == 'tuzilac'"></app-optuznice>
         <app-pregled-zapisnika *ngIf="isLogged == 'tuzilac'"></app-pregled-zapisnika>
+        <app-pregled-prijava *ngIf="isLogged == 'tuzilac'"></app-pregled-prijava>
     </div>
+    <app-prijave-gradjanina *ngIf="isLogged == 'korisnik'"></app-prijave-gradjanina>
     </div>

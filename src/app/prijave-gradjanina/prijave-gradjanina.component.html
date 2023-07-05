@@ -1,0 +1,42 @@
+<div class="container contact-form">
+    <div class="contact-image">
+      <img src="https://static.vecteezy.com/system/resources/previews/005/948/445/original/document-icon-circle-file-symbol-paper-icon-free-vector.jpg" alt="rocket_contact" />
+    </div>
+    <h3>Napravi Prijavu</h3>
+        <form  [formGroup] = "prijavaForm" (ngSubmit) = "napraviPrijavu()" >
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="txtName" class="form-control"  [formControlName] = "'jmbgOsumnjicenog'"  placeholder="Email Optuzenog" value="" />
+                    </div>
+                    <div class="form-group">
+                        <select  name="txtEmail" [formControlName] = "'anonimna'" class="form-control" >
+                            <option value="" disabled selected>Anonimno*</option>
+                            <option [ngValue]="true">DA</option>
+                            <option [ngValue]="false">NE</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="txtEmail" class="form-control" [formControlName] = "'datumPodizanjaPrijave'" placeholder="Datum Zavodjenja*" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Potvrdi" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="txtMsg" class="form-control"   [formControlName] = "'opisPrekrsaja'" placeholder="Opis Prekršaja *" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="alert alert-danger position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlert" (click)="closeAlert()">
+            Došlo je do greške, pokušajte ponovo.
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-success position-fixed top-0 start-0 m-2" role="alert" [hidden]="!showAlertSuccess" (click)="closeAlertSuccess()">
+            Prijava je uspešno kreirana.
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          
+  
