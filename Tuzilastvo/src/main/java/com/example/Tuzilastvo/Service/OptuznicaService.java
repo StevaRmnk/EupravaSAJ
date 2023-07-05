@@ -15,4 +15,6 @@ public interface OptuznicaService {
     public Optuznica nadjiJednuOptuznicu(int idOptuznice);
 
     public Optuznica napraviOptuznicu(Optuznica optuznica);
+
+    public Optuznica statusOptuznice(int idOptuznice);
 }

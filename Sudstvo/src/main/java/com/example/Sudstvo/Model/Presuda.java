@@ -14,7 +14,10 @@ public class Presuda {
     @JoinColumn(name = "sudija", referencedColumnName = "brojSudijskeLicence",nullable = false)
     private String sudija;
 
-   @Column
+    @Column
+    private String jmbgOptuzenog;
+
+    @Column
     private int idOptuznice;
 
    @Column
@@ -50,6 +53,14 @@ public class Presuda {
 
     public void setKriv(boolean kriv) {
         this.kriv = kriv;
+    }
+
+    public String getJmbgOptuzenog() {
+        return jmbgOptuzenog;
+    }
+
+    public void setJmbgOptuzenog(String jmbgOptuzenog) {
+        this.jmbgOptuzenog = jmbgOptuzenog;
     }
 
     public Presuda(){

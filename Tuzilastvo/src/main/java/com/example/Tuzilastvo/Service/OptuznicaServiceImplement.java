@@ -1,6 +1,7 @@
 package com.example.Tuzilastvo.Service;
 
 import com.example.Tuzilastvo.Model.Optuznica;
+import com.example.Tuzilastvo.Model.Status;
 import com.example.Tuzilastvo.Repository.OptuznicaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OptuznicaServiceImplement implements OptuznicaService{
@@ -46,5 +48,14 @@ public class OptuznicaServiceImplement implements OptuznicaService{
 //        }
 
         return optuznicaRepository.save(optuznica);
+    }
+
+    @Override
+    public Optuznica statusOptuznice(int idOptuznice) {
+        Optional<Optuznica> x = optuznicaRepository.findById(idOptuznice);
+        Optuznica optuznica = x.get();
+        optuznica.setStatusOptuznice(Status.PRIHVACENA);
+        Optuznica updatedOptuznica = optuznicaRepository.save(optuznica);
+        return updatedOptuznica;
     }
 }

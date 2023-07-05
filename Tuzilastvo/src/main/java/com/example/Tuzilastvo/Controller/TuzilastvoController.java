@@ -158,4 +158,9 @@ public class TuzilastvoController {
         return new ResponseEntity<>(prijavaService.nadjiSvePrijave(),HttpStatus.OK);
     }
 
+    @PostMapping(value = "/optuznica/status/{id}")
+    public ResponseEntity<Optuznica> statusOptuznice(@PathVariable("id") int idOptuznice){
+
+        return new ResponseEntity<>(optuznicaService.statusOptuznice(idOptuznice),HttpStatus.CREATED);
+    }
 }

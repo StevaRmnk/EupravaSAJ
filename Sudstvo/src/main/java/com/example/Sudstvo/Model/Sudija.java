@@ -18,6 +18,9 @@ public class Sudija {
     @Column
     private String prezime;
 
+    @Column
+    private String lozinka;
+
     public String getBrojSudijskeLicence() {
         return brojSudijskeLicence;
     }
@@ -40,6 +43,14 @@ public class Sudija {
 
     public void setPrezime(String prezime) {
         this.prezime = prezime;
+    }
+
+    public String getLozinka() {
+        return lozinka;
+    }
+
+    public void setLozinka(String lozinka) {
+        this.lozinka = lozinka;
     }
 
     public Sudija(){
