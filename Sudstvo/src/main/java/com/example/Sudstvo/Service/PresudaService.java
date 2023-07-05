@@ -11,4 +11,6 @@ public interface PresudaService {
     public List<Presuda> nadjiSvePresudeJednogGradjanina(String jmbgGradjanina);
     public Presuda nadjiJednuPresudu(int idPresude);
     public Presuda napraviNovuPresudu(Presuda presuda);
+
+    public Boolean Potvrda(String jmbgOsumnjicenog);
 }

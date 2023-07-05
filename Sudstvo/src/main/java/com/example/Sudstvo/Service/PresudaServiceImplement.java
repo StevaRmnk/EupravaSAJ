@@ -36,4 +36,11 @@ public class PresudaServiceImplement implements PresudaService{
     public Presuda napraviNovuPresudu(Presuda presuda) {
        return presudaRepository.save(presuda);
     }
+
+    @Override
+    public Boolean Potvrda(String jmbgOsumnjicenog) {
+       List<Presuda> presude = presudaRepository.findPresudaByJmbgOptuzenog(jmbgOsumnjicenog);
+
+        return presude.isEmpty();
+    }
 }

@@ -13,4 +13,6 @@ public interface SudjenjeService {
     public List<Sudjenje> nadjiSudjenjaOsumnjicenog(String jmbgOsumnjicenog);
 
 
+
+
 }

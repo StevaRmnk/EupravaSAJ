@@ -14,4 +14,6 @@ public interface PresudaRepository extends JpaRepository<Presuda,Integer> {
             nativeQuery = true)
     List<Presuda> nadjiSvePresudeJednogSudije(String brojSudijskeLicence);
 
+    List<Presuda> findPresudaByJmbgOptuzenog(String jmbgOptuzenog);
+
 }

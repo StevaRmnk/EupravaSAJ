@@ -26,7 +26,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("sudstvo")
-@CrossOrigin(origins = "http://localhost:4203")
+@CrossOrigin(origins = {"http://localhost:4203", "http://localhost:4201"})
 public class SudstvoController {
 
     @Autowired
@@ -91,6 +91,11 @@ public class SudstvoController {
     @GetMapping(value = "/sudjenje/osumnjiceni/{email}")
     public ResponseEntity<List<Sudjenje>> nadjiSudjenjaOsumnjicenog(@PathVariable("email") String jmbgOsumnnjicenog){
         return new ResponseEntity<>(sudjenjeService.nadjiSudjenjaOsumnjicenog(jmbgOsumnnjicenog),HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/potvrda/{email}")
+    public ResponseEntity<Boolean> Potvrda(@PathVariable("email") String jmbgOsumnnjicenog){
+        return new ResponseEntity<>(presudaService.Potvrda(jmbgOsumnnjicenog),HttpStatus.OK);
     }
 
     @GetMapping(value = "/optuznice")

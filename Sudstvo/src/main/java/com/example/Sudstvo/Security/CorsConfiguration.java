@@ -12,7 +12,7 @@ public class CorsConfiguration {
     @Bean
     public CorsFilter corsFilter() {
         org.springframework.web.cors.CorsConfiguration config = new org.springframework.web.cors.CorsConfiguration();
-        config.setAllowedOriginPatterns(Arrays.asList("http://localhost:4203")); // Use setAllowedOriginPatterns instead
+        config.setAllowedOriginPatterns(Arrays.asList("http://localhost:4203", "http://localhost:4201")); // Use setAllowedOriginPatterns instead
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         config.setAllowedHeaders(Arrays.asList("*"));
 

@@ -26,4 +26,6 @@ public class SudjenjeServiceImplement implements SudjenjeService {
     public List<Sudjenje> nadjiSudjenjaOsumnjicenog(String jmbgOsumnjicenog) {
         return sudjenjeRepository.findSudjenjeByJmbgOptuzenog(jmbgOsumnjicenog);
     }
+
+
 }
