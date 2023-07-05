@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ZapisnikPayload } from '../zapisnik/zapisnik.payload';
 import { Observable } from 'rxjs';
+import jwt_decode from 'jwt-decode';
 import { PregledZapisnikaComponent } from '../pregled-zapisnika/pregled-zapisnika.component';
 
 @Injectable({
@@ -27,7 +28,12 @@ export class ZapisnikServiceService {
    zapisniciPolicajca(brojZnacke: String){
     return this.httpClient.get<any>(`${this.apiUrl}/policija/zapisnici/` + brojZnacke)
    }
-  
+   
+   potvrda(){
+    const Token = localStorage.getItem("token");
+    const decodedPToken = jwt_decode(Token!) as { [key: string]: any };
+    return this.httpClient.get<any>("http://localhost:8083/sudstvo/potvrda/" + decodedPToken['email'])
+   }
 
  
 }

@@ -1,0 +1,21 @@
+<div class="card">
+    <h5 class="card-header">Zatražite potvrdu o nekažnjavanju</h5>
+    <div class="card-body">
+      <h5 class="card-title">Potvrda o nekažnjavanju</h5>
+      <p class="card-text">Klikom na dugme ispod možete zatražiti uverenje o nekažnjavanju ukoliko do sada nikada niste osuđivani.</p>
+      <a href="#" class="btn btn-primary" (click)="zatraziPotvrdu()">Zatraži potvrdu</a>
+    </div>
+  </div>
+
+  <div class="card text-center" id="potvrda" [hidden]="!cardVisible">
+    <div class="card-header" id="potvrdaHeader">
+        Potvrda o nekažnjavanju
+    </div>
+    <div class="card-body">
+      <h5 class="card-title" id="text">Special title treatment</h5>
+      <p class="card-text" id="bodyText">With supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer text-body-secondary">
+        {{ date | date: 'yyyy-MM-dd' }}
+    </div>
+  </div>

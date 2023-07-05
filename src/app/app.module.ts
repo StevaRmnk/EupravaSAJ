@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ZapisnikComponent } from './zapisnik/zapisnik.component';
 import { PregledZapisnikaComponent } from './pregled-zapisnika/pregled-zapisnika.component';
+import { PotvrdaKaznjavanjeComponent } from './potvrda-kaznjavanje/potvrda-kaznjavanje.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PregledZapisnikaComponent } from './pregled-zapisnika/pregled-zapisnika
     HomeComponent,
     LoginComponent,
     ZapisnikComponent,
-    PregledZapisnikaComponent
+    PregledZapisnikaComponent,
+    PotvrdaKaznjavanjeComponent
   ],
   imports: [
     BrowserModule,
